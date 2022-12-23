@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+:root {
+    --font: 'Montserrat', sans-serif;
+    --primary-color: #4e5150;
+    --secondary-color: #a9a9a9;
+    --tertiary-color: #bdbdbd;
+    --background: #e5e5e5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 4em 2em;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.header__img {
+    width: 100px;
+    height: 100px;
+    border-radius: 15%;
+    background-size: cover;
+}
+
+.header__title {
+    font-family: var(--font);
+    font-size: 1.5em;
+    color: var(--primary-color);
+}
+
+.header__description {
+    font-family: var(--font);
+    font-size: 0.8em;
+    color: var(--secondary-color);
+}
+
+.header__stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    text-align: center;
+}
+
+.header__stat {
+    background-color: var(--background);
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+.header__stat-number {
+    font-size: 1.1em;
+    color: var(--primary-color);
+}
+
+.header__stat-text {
+    font-size: 0.8em;
+    color: var(--tertiary-color);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 2em;
+}
+
+.main__grid__header {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.main__grid__header--one {
+    background-image: url('photo1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    width: 350px;
+    height: 350px;
+}
+
+.main__grid__header--two {
+    background-image: url('photo2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    width: 600px;
+    height: 350px;
+}
+
+.main__grid__body {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.main__grid__body--left {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.main__grid__body--left__one {
+    background-image: url('photo3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    width: 715px;
+    height: 350px;
+}
+
+.main__grid__body--left__two {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.main__grid__body--left__two__img--one {
+    background-image: url('photo6.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    width: 350px;
+    height: 350px;
+}
+
+.main__grid__body--left__two__img--two {
+    background-image: url('photo5.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    width: 350px;
+    height: 350px;
+}
+
+.main__grid__body--right {
+    background-image: url('photo_4.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    border-radius: 10px;
+    width: 235px;
+    height: 715px;
+}
+
+@media screen and (max-width: 985px) {
+    .main__grid__header,
+    .main__grid__body,
+    .main__grid__body--left,
+    .main__grid__body--left__two {
+        flex-direction: column;
+    }
+
+    .main__grid__header--one {
+        width: 80vw;
+        height: 50vh;
+    }
+
+    .main__grid__header--two {
+        width: 80vw;
+        height: 300px;
+    }
+
+    .main__grid__body--left__one {
+        width: 80vw;
+        height: 300px;
+    }
+
+    .main__grid__body--left__two__img--one {
+        width: 80vw;
+        height: 50vw;
+    }
+
+    .main__grid__body--left__two__img--two {
+        width: 80vw;
+        height: 50vw;
+    }
+
+    .main__grid__body--right {
+        background-position: center;
+        width: 80vw;
+        height: 80vw;
+    }
+}
